@@ -1,4 +1,4 @@
-##The function is written to fulfill the week 3 Coursera assignment
+##Catching the inverse of a matrix
 makeCacheMatrix <- function(x = matrix()) { ## define the argument
   inv <- NULL                             ## initialize inv as NULL; will hold value of matrix inverse 
   set <- function(y) {                    ## define the set function to assign new value of the matrix
@@ -11,6 +11,7 @@ makeCacheMatrix <- function(x = matrix()) { ## define the argument
   getinverse <- function() inv                     ## gets the value of inv where called
   list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
+##Compute the inverse of the matrix
 cacheSolve <- function(x, ...) {## Return a matrix that is the inverse of 'x'
   inv <- x$getinverse()  ##Assign the inverse value of x to inv
   if(!is.null(inv)) {     ##If inv is not null, return the message and the value of inv
